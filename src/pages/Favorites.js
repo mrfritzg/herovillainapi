@@ -11,7 +11,7 @@ export default function Favorites() {
    return (
         
         <div>
-            <h1>Here is your List of Favorite Heros/Villians</h1>
+            <h1>Here is your List of Favorite Heros/Villains</h1>
 {favCharacters.map(hero => {
           return (
             <div key={hero.id}>

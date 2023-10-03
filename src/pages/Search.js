@@ -12,7 +12,7 @@ export default function Search() {
     // let [heroData, setHeroData] = useState([]);
     // const [isPending, setIsPending] = useState(true);
     // const [error, setError] = useState(null)
-    
+
     //a variable that determines the search state status in order to reset certain input
     // and data fields
     const [submitSearch, setSubmitSearch] = useState(false);
@@ -23,7 +23,7 @@ export default function Search() {
     // the useFetch() custom hook will make a call to a different API to get all superheros on one call
     // which I will filter into different categories
     let url1 = `https://akabab.github.io/superhero-api/api/all.json`;
-    const {data:heroData , isPending, error} = useFetch(url1)
+    const { data: heroData, isPending, error } = useFetch(url1)
     // console.log(heroData);
     // const dataResults = useFetch(url1);
 
@@ -42,8 +42,8 @@ export default function Search() {
 
 
 
-// fetchSuperheroes is retreiving superheros by name, this API has a limited
-// search features & it doesn't allow me to get all superheroes on one call
+    // fetchSuperheroes is retreiving superheros by name, this API has a limited
+    // search features & it doesn't allow me to get all superheroes on one call
     const fetchSuperheroes = async (name) => {
         // Fetch and set all superhero data here
         // Example: Use your API call here to get superhero data
@@ -52,14 +52,14 @@ export default function Search() {
         try {
             const response = await fetch(url);
             const data = await response.json();
-            if(data.response === 'success') {
+            if (data.response === 'success') {
                 setSearchList(data.results);
                 // console.log(searchList)
                 setAllData(data.results);
                 // console.log(data.results);  
                 // console.log(data);    
             } else throw new Error('Parameter is not a number!');
-                      
+
         } catch (error) {
             console.error('Error fetching superhero data:', error);
             // return {'error': error.message }
@@ -75,9 +75,9 @@ export default function Search() {
         //if the search text is more than 1 letter, start the fetch
         if (inputValue.length > 1) {
             fetchSuperheroes(inputValue);
-        } 
+        }
         //if the search text is 1 letter or less, clear the search list
-        else if (inputValue.length < 2){
+        else if (inputValue.length < 2) {
             setSearchList([]);
         }
     };
@@ -99,16 +99,16 @@ export default function Search() {
     };
 
     //shuffle the results of the array
-    const shuffleSliceArray = (array) => { 
-        return array.sort(() => Math.random() - 0.5).slice(0,5); 
-    }; 
-          
+    const shuffleSliceArray = (array) => {
+        return array.sort(() => Math.random() - 0.5).slice(0, 5);
+    };
 
-    
+
+
 
     return (
         <div className="container-fluid text-center">
-          {/*}  <div className="characterlists">
+            {/*}  <div className="characterlists">
 
                 <div className="marvel-characters">
                     <h2>MARVEL</h2>
@@ -130,6 +130,7 @@ export default function Search() {
             <div className="searchApp ">
                 <div className="searchApp-data">
 
+                    <h1 className="search-page-Title">Search for a Hero or Villain</h1>
                     {/* SEARCH FORM */}
                     <form onSubmit={handleSubmit} className='app-header-search'>
                         <input
@@ -138,25 +139,27 @@ export default function Search() {
                             value={searchText}
                             onChange={handleInputChange}
                         />
-                        <button className = "search-btn"> 
-                        <i className = "fas fa-search"></i>
+                        <button className="search-btn">
+                            <i className="fas fa-search"></i>
                         </button>
 
-                    {/* PREVIEW SEARCH LIST */}
-                    <div className="search-list">
-                        {!submitSearch && searchList?.map((hero) => {return (
-                           <Link className="search-list-item-link" to={`/characterdetails/${hero.id}`}  key={hero.id}>
-                           <div  className="search-list-item">
-                             <img src = {hero.image.url ? hero.image.url : ""} alt = {hero.name} />
-                             <p>{hero.name}</p>    
-                             </div>
-                             </Link>
-                             )})}
-                    </div>
+                        {/* PREVIEW SEARCH LIST */}
+                        <div className="search-list">
+                            {!submitSearch && searchList?.map((hero) => {
+                                return (
+                                    <Link className="search-list-item-link" to={`/characterdetails/${hero.id}`} key={hero.id}>
+                                        <div className="search-list-item">
+                                            <img src={hero.image.url ? hero.image.url : ""} alt={hero.name} />
+                                            <p>{hero.name}</p>
+                                        </div>
+                                    </Link>
+                                )
+                            })}
+                        </div>
                     </form>
                 </div>
 
-               
+
             </div>
             {/* Display the results of the character search */}
             <div className="character-results">
