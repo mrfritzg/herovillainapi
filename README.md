@@ -33,8 +33,7 @@ Here is the URL for the page: https://master--strong-basbousa-98aece.netlify.app
 
 **Character Details**
 - `Click on the character to view details such as: Code Name, Full Name, POWER STATS (Combat, Durability, Intelligence, Power, Speed, Strength) Biography, and more`
-- 
-![super5](https://github.com/mrfritzg/herovillainapi/assets/25967991/902141bf-c2a4-4487-a315-22ed8f0a5909)
+- ![super5](https://github.com/mrfritzg/herovillainapi/assets/25967991/902141bf-c2a4-4487-a315-22ed8f0a5909)
 
 ### Technical Setup
 This website gathers data from 2 separate APIs. 
