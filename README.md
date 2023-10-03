@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# The Super Heroes/Villains Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The purpose of this project is to build a website where you lookup Super Heroes/Villain information. 
+While browsing the internet, I could only find Super Heroes/Villain websites that were limited to a single comic book universe, DC-only, Marvel-only, etc. 
+This website combines Super Heroes/Villains data from Marvel, DC and more!. The goal of this website is to make it to the number 1 site for all  Super Heroes/Villains information. 
 
-## Available Scripts
 
-In the project directory, you can run:
+This is a project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm start`
+Here is the URL for the page: https://master--strong-basbousa-98aece.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## The website is divided into 3 main Sections, HOME, SEARCH, FAVORITES
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**HOME**
+This page contains a list of all Super Heroes/Villains. Please scroll thru the list. 
+Click on the image for more information about the character.
+Click on the "Add to Favorites" button to add to your personal list of favorite characters
 
-### `npm test`
+**SEARCH**
+You can search for a specific character on this page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**FAVORITES**
+This page your personal list of favorite characters.
+You can delete any characters you no longer want in your favorites
 
-### `npm run build`
+### Technical Setup
+This website gathers data from 2 separate APIs. 
+`https://www.superheroapi.com/` -- This allows us to search by Character Name and ID and other stats, But doesn't provides a full list of characters all at once. This is suitable for searching. 2 types of Fetch calls are being made to this API -- for SEARCH page & CHARACTER page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`https://akabab.github.io/superhero-api/api` -- This provides a full list of characters all at once. This is suitable for the Home Page. 1 Fetch call is being made to this API -- for HOME page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**There are 6 components and 5 pages**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Favorites page stores the favorite characters in Local Storage of the browser
 
-### `npm run eject`
+### Update 1 -- Oct 3rd 2023
+- `A Slider has been added to the Home Page`
+- `A Search preview has been added to the Search Page`
+- `Internal features have also been updated, more CSS, custom hook for fetch calls, etc`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### FUTURE FEATURES 
+- `Add more CSS styling`
+- `Add a random back ground for each page`
+- `Add Filter Search bar for HomePage`
+- `Add Filter Button for each comic book universe, Hero and Villains, to help with searching`
+- `Upgrade the use of Local Storage to Redux/Context`
