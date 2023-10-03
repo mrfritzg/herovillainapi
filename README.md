@@ -27,12 +27,12 @@ Here is the URL for the page: https://master--strong-basbousa-98aece.netlify.app
 ![super3](https://github.com/mrfritzg/herovillainapi/assets/25967991/3771eabb-fe91-423b-808b-2f22a04e1fba)
 
 **FAVORITES**
--`This page your personal list of favorite characters.`
--`You can delete any characters you no longer want in your favorites`
+- `This page your personal list of favorite characters.`
+- `You can delete any characters you no longer want in your favorites`
 ![super4](https://github.com/mrfritzg/herovillainapi/assets/25967991/6fb2bcf9-c977-45a5-ae98-f6a3191141e7)
 
 **Character Details**
--`Click on the character to view details such as: Code Name, Full Name, POWER STATS (Combat, Durability, Intelligence, Power, Speed, Strength) Biography, and more`
+- `Click on the character to view details such as: Code Name, Full Name, POWER STATS (Combat, Durability, Intelligence, Power, Speed, Strength) Biography, and more`
 ![super5](https://github.com/mrfritzg/herovillainapi/assets/25967991/902141bf-c2a4-4487-a315-22ed8f0a5909)
 
 ### Technical Setup
