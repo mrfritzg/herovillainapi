@@ -59,7 +59,7 @@ export default function Home() {
     <div className="homepage">
 
       <h1>The Super Heroes/Villains Website</h1>
-      <h2>This Website provides Hero/Villain from mutliple universes. Most Websites give you only once comic book creator source, but we give you Marvel, DC and more!.</h2>
+      <h2>This Website provides Hero/Villain from mutliple universes. Most Websites give you only one comic book creator source, but we give you Marvel, DC and more!.</h2>
       <h2>Please Scroll Thru and find what you're looking for or Click on the Search Page.</h2>
 
       {error && <div><h1>{error}</h1></div>}
@@ -89,7 +89,7 @@ export default function Home() {
             {dcData}
           </Carousel>
         </div>
-        
+
 {/* other-characters */}
         <div className="other-characters">
           <h2>OTHER</h2>
