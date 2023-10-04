@@ -7,7 +7,7 @@ This website combines Super Heroes/Villains data from Marvel, DC and more!. The 
 
 This is a project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Here is the URL for the page: https://master--strong-basbousa-98aece.netlify.app/
+Here is the URL for the page: https://master--shiny-muffin-437497.netlify.app/
 
 ## The website is divided into 3 main Sections, HOME, SEARCH, FAVORITES, Character Details
 
