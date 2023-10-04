@@ -47,9 +47,10 @@ The Favorites page stores the favorite characters in Local Storage of the browse
 
 ### Update 1 -- Oct 3rd 2023
 - `A Slider has been added to the Home Page`
-- `The Home page has 3 catehgories that lists the characters by Comic Universes - Marvel , DC, Other`
+- `The Home page has 3 categories that lists the characters by Comic Universes - Marvel , DC, Other more categories to come`
 - `A Search preview has been added to the Search Page`
 - `Internal features have also been updated, more CSS, custom hook for fetch calls, etc`
+- `The Home page randomnly displays different characters on each page load for each universe -- ShuffleSliceArray function created`
 
 ### FUTURE FEATURES 
 - `Add more CSS styling`
