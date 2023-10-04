@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import CharacterList from "../components/CharacterList";
 import useFetch from "../components/useFetch";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -73,7 +72,7 @@ export default function Home() {
             {marvelData}
           </Carousel>
         </div>
-        
+
         <div className="dc-characters">
           <h2>DC</h2>
           <Carousel
