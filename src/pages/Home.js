@@ -12,9 +12,11 @@ export default function Home() {
   let url = `https://akabab.github.io/superhero-api/api/all.json`;
 
 
-
+//useFetch is a custom hook that makes the API call & returns API data
   const { data: heroData, isPending, error } = useFetch(url)
 
+
+  //filters the array data universe, via the query parameter
   const filterSuperheroes = (query) => {
     let filteredHeroes = heroData?.filter((hero) =>
       hero?.biography?.publisher?.toLowerCase().includes(query.toLowerCase())
@@ -22,11 +24,12 @@ export default function Home() {
     return filteredHeroes
   };
 
-  //shuffle the results of the array
+  //shuffle the results of the array, which is normally ordered by an ID
   const shuffleSliceArray = (array) => {
     return array.sort(() => Math.random() - 0.5).slice(0, 100);
   };
 
+//getting marvel data from the API data
   const marvelData = shuffleSliceArray(filterSuperheroes('marvel')).map((hero) => (
     <div className="heroList">
       <div key={hero.id}></div>
@@ -34,6 +37,7 @@ export default function Home() {
     </div>
   ));
 
+  //getting DC data from the API data
   const dcData = shuffleSliceArray(filterSuperheroes('dc')).map((hero) => (
     <div className="heroList">
       <div key={hero.id}></div>
@@ -41,6 +45,7 @@ export default function Home() {
     </div>
   ));
 
+  //getting other Universe Data data from the API data
   const otherUniverseData = shuffleSliceArray(heroData?.filter(hero =>
     hero?.biography?.publisher?.toLowerCase() !== ('marvel comics') &&
     hero?.biography?.publisher?.toLowerCase() !== ('dc comics'))).map((hero) => (
@@ -63,6 +68,7 @@ export default function Home() {
 
       <div className="characterlists">
 
+{/* marvel-characters */}
         <div className="marvel-characters">
           <h2>MARVEL</h2>
           <Carousel
@@ -73,6 +79,7 @@ export default function Home() {
           </Carousel>
         </div>
 
+{/* dc-characters */}
         <div className="dc-characters">
           <h2>DC</h2>
           <Carousel
@@ -82,7 +89,8 @@ export default function Home() {
             {dcData}
           </Carousel>
         </div>
-
+        
+{/* other-characters */}
         <div className="other-characters">
           <h2>OTHER</h2>
           <Carousel

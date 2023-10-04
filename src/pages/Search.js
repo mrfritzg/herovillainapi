@@ -4,42 +4,18 @@ import CharacterList from '../components/CharacterList';
 import useFetch from "../components/useFetch";
 
 export default function Search() {
-
+    // state for text variable in Input search field
     const [searchText, setSearchText] = useState('');
-    const [searchList, setSearchList] = useState([]);
-    const [allData, setAllData] = useState([]);
 
-    // let [heroData, setHeroData] = useState([]);
-    // const [isPending, setIsPending] = useState(true);
-    // const [error, setError] = useState(null)
+    // state for the preview searchlist variable
+    const [searchList, setSearchList] = useState([]);
+
+    // state for the variable that will hold the API Data
+    const [allData, setAllData] = useState([]);
 
     //a variable that determines the search state status in order to reset certain input
     // and data fields
     const [submitSearch, setSubmitSearch] = useState(false);
-
-    // Filtered data states
-    // const [searchList, setSearchList] = useState([]);
-
-    // the useFetch() custom hook will make a call to a different API to get all superheros on one call
-    // which I will filter into different categories
-    let url1 = `https://akabab.github.io/superhero-api/api/all.json`;
-    const { data: heroData, isPending, error } = useFetch(url1)
-    // console.log(heroData);
-    // const dataResults = useFetch(url1);
-
-
-    // const initialFetch = () => {
-    //     setHeroData(dataResults?.data);
-    //     setIsPending(dataResults?.isPending);
-    //     setError(dataResults?.error);
-    // }
-
-    // useEffect(() => {
-    //     // Fetch initial data or load it from a source
-    //     initialFetch();
-    // }, []);
-
-
 
 
     // fetchSuperheroes is retreiving superheros by name, this API has a limited
