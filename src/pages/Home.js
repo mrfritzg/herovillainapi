@@ -73,12 +73,7 @@ export default function Home() {
             {marvelData}
           </Carousel>
         </div>
-
-        {/* <div className="marvel-characters">
-          <h2>MARVEL</h2>
-          <CharacterList heroData={shuffleSliceArray(filterSuperheroes('marvel'))} />
-        </div> */}
-
+        
         <div className="dc-characters">
           <h2>DC</h2>
           <Carousel
