@@ -59,3 +59,4 @@ The Favorites page stores the favorite characters in Local Storage of the browse
 - `Improve Navigation Menu`
 - `Add a random back ground for each page`
 - `Upgrade the use of Local Storage to Redux/Context`
+- `Add error message when you search for a hero that can't be found`

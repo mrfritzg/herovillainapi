@@ -91,21 +91,6 @@ export default function Search() {
         setSearchText('');
     }
 
-    const filterSuperheroes = (query) => {
-        let filteredHeroes = heroData?.filter((hero) =>
-            hero?.biography?.publisher?.toLowerCase().includes(query.toLowerCase())
-        );
-        return filteredHeroes
-    };
-
-    //shuffle the results of the array
-    const shuffleSliceArray = (array) => {
-        return array.sort(() => Math.random() - 0.5).slice(0, 5);
-    };
-
-
-
-
     return (
         <div className="container-fluid text-center">
             {/*}  <div className="characterlists">
