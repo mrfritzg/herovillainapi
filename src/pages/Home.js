@@ -63,12 +63,15 @@ export default function Home() {
       {/* <CharacterList heroData={heroData} /> */}
 
       <div className="characterlists">
-      
+
         <div className="marvel-characters">
-        <h2>MARVEL</h2>
-        <Carousel responsive={ responsive }>
-          {marvelData}
-        </Carousel>
+          <h2>MARVEL</h2>
+          <Carousel
+            responsive={responsive}
+            showDots={true}
+          >
+            {marvelData}
+          </Carousel>
         </div>
 
         {/* <div className="marvel-characters">
@@ -78,15 +81,21 @@ export default function Home() {
 
         <div className="dc-characters">
           <h2>DC</h2>
-          <Carousel responsive={ responsive }>
-          {dcData}
+          <Carousel
+            responsive={responsive}
+            showDots={true}
+          >
+            {dcData}
           </Carousel>
         </div>
 
         <div className="other-characters">
           <h2>OTHER</h2>
-          <Carousel responsive={ responsive }>
-          {otherUniverseData}
+          <Carousel
+            responsive={responsive}
+            showDots={true}
+          >
+            {otherUniverseData}
           </Carousel>
         </div>
       </div>
