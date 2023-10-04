@@ -12,7 +12,7 @@ Here is the URL for the page: https://master--strong-basbousa-98aece.netlify.app
 ## The website is divided into 3 main Sections, HOME, SEARCH, FAVORITES, Character Details
 
 **HOME**
-- `This page contains a list of all Super Heroes/Villains. Please scroll thru the list.` 
+- `This page contains a list of all Super Heroes/Villains. Please scroll thru the Carousel.` 
 - `Click on the image for more information about the character.`
 - `Click on the "Add to Favorites" button to add to your personal list of favorite characters`
 - `View Characters by categories (Comic Universe: Marvel, DC, Other, more to come)`
@@ -46,7 +46,7 @@ This website gathers data from 2 separate APIs.
 The Favorites page stores the favorite characters in Local Storage of the browser
 
 ### Update 1 -- Oct 3rd 2023
-- `A Slider has been added to the Home Page`
+- `A Carousel Slider has been added to the Home Page`
 - `The Home page has 3 categories that lists the characters by Comic Universes - Marvel , DC, Other more categories to come`
 - `A Search preview has been added to the Search Page`
 - `Internal features have also been updated, more CSS, custom hook for fetch calls, etc`
